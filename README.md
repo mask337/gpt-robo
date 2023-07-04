@@ -49,14 +49,14 @@ return last message given by ChatGPT
 ```
 gpt.response_gpt(response, user_content)
 ```
-- response
+- response  
 past conversations and system messages
   - list
     - dict
       - role (system/user/assistant)
       - content string
 
-- user_content
+- user_content  
 user input text  
 string type
 
