@@ -20,14 +20,11 @@ ChatGPTAPIのやり取りをするプログラムフォルダ
 
 ## hardware
 ### model
-ハードウェアの3D modelを管理するフォルダ
-スライスしたデータも同梱予定
+ハードウェアの3D modelを管理するフォルダ  スライスしたデータも同梱予定
 ### program
-RaspberryPiのプログラムや回路図等の管理フォルダ
-直下に全体を制御するプログラムを配置する
+RaspberryPiのプログラムや回路図等の管理フォルダ  直下に全体を制御するプログラムを配置する
 #### base
-RaspberryPiの電子部品制御プログラムの置き場
-以降のプログラムはbase内のclassをimportして開発すること
+RaspberryPiの電子部品制御プログラムの置き場  以降のプログラムはbase内のclassをimportして開発すること
 #### motion
 モーションのプログラムを配置する
 
@@ -43,9 +40,7 @@ This file
 # Manual
 
 ## ChatGPT API
-class name "gpt"
-chatgpt talk function
-return last message given by ChatGPT
+class name "gpt"  chatgpt talk function  return last message given by ChatGPT
 ```
 gpt.response_gpt(response, user_content)
 ```
@@ -57,8 +52,7 @@ past conversations and system messages
       - content string
 
 - user_content
-user input text
-string type
+user input text  string type
 
 ### sample
 response
