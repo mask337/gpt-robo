@@ -1,4 +1,5 @@
 import os
+import random
 
 from dotenv import load_dotenv
 
@@ -9,11 +10,11 @@ load_dotenv()
 
 class gpt:
 
-
-    openai.api_key = os.environ["APIKEY"]
-    openai.api_base = "https://api.openai.iniad.org/api/v1"
-
-    def response_gpt(self,response,user_content):
+    def response_gpt(self, response, user_content):
+        apikeys = os.environ["APIKEY"]
+        apik = apikeys.split(",")
+        openai.api_key = random.choice(apik)
+        openai.api_base = "https://api.openai.iniad.org/api/v1"
         messages = response
 
         messages.append({"role": "user", "content": user_content})
@@ -22,7 +23,7 @@ class gpt:
             messages=messages
         )
         agent_res = response["choices"][0]["message"]["content"]
-        messages.append({"role": "assistant","content": agent_res})
+        messages.append({"role": "assistant", "content": agent_res})
         if (len(messages) > 6):
             messages.pop(0)
         return messages
